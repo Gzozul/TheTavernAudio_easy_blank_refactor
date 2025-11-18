@@ -317,7 +317,11 @@
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{539d2d2a-36d5-4690-97ec-68ce572bfb8c}" />
-	<object class="SpatialiserEffect" id="{5d2e7dc4-8fc7-475c-8f8c-43874f992061}" />
+	<object class="SpatialiserEffect" id="{5d2e7dc4-8fc7-475c-8f8c-43874f992061}">
+		<property name="extentMode">
+			<value>1</value>
+		</property>
+	</object>
 	<object class="AutomationCurve" id="{9d460a31-7749-4851-892f-9127bf815e77}">
 		<relationship name="parameter">
 			<destination>{7bf63ab8-8ce7-4604-af15-96b8a35c9439}</destination>

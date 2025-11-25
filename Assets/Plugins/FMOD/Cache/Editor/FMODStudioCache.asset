@@ -123,7 +123,7 @@ MonoBehaviour:
   StudioPath: 
   Min: 0
   Max: 1
-  Default: 0
+  Default: 1
   ID:
     data1: 2993061207
     data2: 405153108
@@ -877,7 +877,7 @@ MonoBehaviour:
   Path: Assets/FMOD/projekt1/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638990844010517950
+  lastModified: 638996901611901410
   FileSizes:
   - Name: Desktop
     Value: 1732
@@ -915,7 +915,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: -31978083695117126}
   cacheVersion: 131856
-  cacheTime: 638990844010517950
+  cacheTime: 638996901611901410
   SerializableEventsDict:
   - key: event:/Player/Jumps/sfx_player_jump
     index: 0
@@ -1220,10 +1220,10 @@ MonoBehaviour:
   Path: Assets/FMOD/projekt1/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638990844010498377
+  lastModified: 638996901611876317
   FileSizes:
   - Name: Desktop
-    Value: 6937600
+    Value: 6937824
   Exists: 1
 --- !u!114 &4284474310712303889
 MonoBehaviour:

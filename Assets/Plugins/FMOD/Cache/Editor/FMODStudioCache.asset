@@ -207,6 +207,33 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &-5160124240201126162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/inside_room
+  m_EditorClassIdentifier: 
+  Path: snapshot:/inside_room
+  Guid:
+    Data1: 1794917823
+    Data2: 1085207406
+    Data3: 1900615339
+    Data4: 282674492
+  Banks:
+  - {fileID: 4232040016842089913}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-5122131319743888464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -877,10 +904,10 @@ MonoBehaviour:
   Path: Assets/FMOD/projekt1/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638996901611901410
+  lastModified: 639015095874390209
   FileSizes:
   - Name: Desktop
-    Value: 1732
+    Value: 1782
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -906,8 +933,9 @@ MonoBehaviour:
   - {fileID: 6827290910441564663}
   - {fileID: -543609748680018354}
   - {fileID: -7087674446002271241}
-  - {fileID: 5417081499488440616}
   - {fileID: 4284474310712303889}
+  - {fileID: 6903222015203118347}
+  - {fileID: -5160124240201126162}
   EditorParameters:
   - {fileID: 4145422942525041534}
   MasterBanks:
@@ -915,7 +943,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: -31978083695117126}
   cacheVersion: 131856
-  cacheTime: 638996901611901410
+  cacheTime: 639015095874390209
   SerializableEventsDict:
   - key: event:/Player/Jumps/sfx_player_jump
     index: 0
@@ -933,10 +961,12 @@ MonoBehaviour:
     index: 6
   - key: event:/Interaction/Fireplace/sfx_fireplace_variants
     index: 7
-  - key: snapshot:/New Snapshot
-    index: 8
   - key: event:/Player/Footsteps/sfx_footsteps
+    index: 8
+  - key: snapshot:/outside
     index: 9
+  - key: snapshot:/inside_room
+    index: 10
 --- !u!114 &464241992053733205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1220,10 +1250,10 @@ MonoBehaviour:
   Path: Assets/FMOD/projekt1/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638996901611876317
+  lastModified: 639015095874380165
   FileSizes:
   - Name: Desktop
-    Value: 6937824
+    Value: 6940064
   Exists: 1
 --- !u!114 &4284474310712303889
 MonoBehaviour:
@@ -1299,33 +1329,6 @@ MonoBehaviour:
   - Open
   - Close
   Exists: 1
---- !u!114 &5417081499488440616
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: snapshot:/New Snapshot
-  m_EditorClassIdentifier: 
-  Path: snapshot:/New Snapshot
-  Guid:
-    Data1: -1402560555
-    Data2: 1282466663
-    Data3: -612255831
-    Data4: -1369142477
-  Banks:
-  - {fileID: 4232040016842089913}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
 --- !u!114 &6029252828536356757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1427,6 +1430,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 77538
+--- !u!114 &6903222015203118347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/outside
+  m_EditorClassIdentifier: 
+  Path: snapshot:/outside
+  Guid:
+    Data1: 125344290
+    Data2: 1135548644
+    Data3: -223309938
+    Data4: -574102395
+  Banks:
+  - {fileID: 4232040016842089913}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &7194919666413268071
 MonoBehaviour:
   m_ObjectHideFlags: 0

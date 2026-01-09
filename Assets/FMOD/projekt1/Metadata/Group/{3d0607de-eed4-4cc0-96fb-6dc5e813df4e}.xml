@@ -4,6 +4,9 @@
 		<property name="name">
 			<value>Interaction</value>
 		</property>
+		<relationship name="masters">
+			<destination>{5a736798-fc7d-4305-97b3-2662ce6aa00b}</destination>
+		</relationship>
 		<relationship name="effectChain">
 			<destination>{935d686d-f5be-4d2e-afdd-b0baf430513e}</destination>
 		</relationship>

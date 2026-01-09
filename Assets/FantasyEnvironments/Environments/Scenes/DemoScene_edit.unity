@@ -2337,6 +2337,7 @@ GameObject:
   - component: {fileID: 613997989}
   - component: {fileID: 613997994}
   - component: {fileID: 613997995}
+  - component: {fileID: 613997997}
   - component: {fileID: 613997996}
   m_Layer: 6
   m_Name: Player
@@ -2578,6 +2579,23 @@ MonoBehaviour:
       Data3: -223309938
       Data4: -574102395
     Path: snapshot:/outside
+--- !u!114 &613997997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613997984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68f4ed2e91580f4459a40df16f56ba56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  globalMuteActive: 1
+  musicMuteActive: 0
+  tavernMuteActive: 0
+  outsideMuteActive: 0
+  ambientMuteActive: 0
 --- !u!1 &688602384
 GameObject:
   m_ObjectHideFlags: 0
@@ -6174,16 +6192,16 @@ MonoBehaviour:
       Data4: -1683149749
     Path: event:/Music/mfx_tavern_music
   Event: 
-  EventPlayTrigger: 0
-  EventStopTrigger: 0
+  EventPlayTrigger: 1
+  EventStopTrigger: 2
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
   NonRigidbodyVelocity: 0
   Params: []
   OverrideAttenuation: 1
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 14
+  OverrideMinDistance: 5
+  OverrideMaxDistance: 10
 --- !u!4 &1890380618
 Transform:
   m_ObjectHideFlags: 0

@@ -670,6 +670,33 @@ MonoBehaviour:
   - Wood
   - Stone
   Exists: 1
+--- !u!114 &-2662257087870544256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Interaction/Fireplace/sfx_fireplace_on
+  m_EditorClassIdentifier: 
+  Path: event:/Interaction/Fireplace/sfx_fireplace_on
+  Guid:
+    Data1: -690877916
+    Data2: 1307109166
+    Data3: 1898075071
+    Data4: 666155311
+  Banks:
+  - {fileID: 4232040016842089913}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-2020946514070668020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -727,6 +754,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 49000
+--- !u!114 &-1825244296449448465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Interaction/Fireplace/sfx_bottles
+  m_EditorClassIdentifier: 
+  Path: event:/Interaction/Fireplace/sfx_bottles
+  Guid:
+    Data1: -7845108
+    Data2: 1099622653
+    Data3: -1717668173
+    Data4: -189582928
+  Banks:
+  - {fileID: 4232040016842089913}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 9
+  Length: 0
 --- !u!114 &-1554062120135982555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -834,6 +888,33 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &-579310382514118793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Interaction/Fireplace/sfx_barrel
+  m_EditorClassIdentifier: 
+  Path: event:/Interaction/Fireplace/sfx_barrel
+  Guid:
+    Data1: -1469017530
+    Data2: 1305687457
+    Data3: 6590595
+    Data4: 157115798
+  Banks:
+  - {fileID: 4232040016842089913}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-543609748680018354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -904,10 +985,10 @@ MonoBehaviour:
   Path: Assets/FMOD/projekt1/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639035769349343742
+  lastModified: 639045338393396744
   FileSizes:
   - Name: Desktop
-    Value: 2032
+    Value: 2256
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -936,6 +1017,11 @@ MonoBehaviour:
   - {fileID: 4284474310712303889}
   - {fileID: 6903222015203118347}
   - {fileID: -5160124240201126162}
+  - {fileID: -2662257087870544256}
+  - {fileID: 686661646517926895}
+  - {fileID: -1825244296449448465}
+  - {fileID: -579310382514118793}
+  - {fileID: 592878595647774366}
   EditorParameters:
   - {fileID: 4145422942525041534}
   MasterBanks:
@@ -943,7 +1029,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: -31978083695117126}
   cacheVersion: 131856
-  cacheTime: 639035769349343742
+  cacheTime: 639045338393396744
   SerializableEventsDict:
   - key: event:/Player/Jumps/sfx_player_jump
     index: 0
@@ -967,6 +1053,16 @@ MonoBehaviour:
     index: 9
   - key: snapshot:/inside_room
     index: 10
+  - key: event:/Interaction/Fireplace/sfx_fireplace_on
+    index: 11
+  - key: event:/Interaction/Fireplace/sfx_fireplace_off
+    index: 12
+  - key: event:/Interaction/Fireplace/sfx_bottles
+    index: 13
+  - key: event:/Interaction/Fireplace/sfx_barrel
+    index: 14
+  - key: event:/Interaction/Fireplace/sfx_knife
+    index: 15
 --- !u!114 &464241992053733205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -996,6 +1092,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 49000
+--- !u!114 &592878595647774366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Interaction/Fireplace/sfx_knife
+  m_EditorClassIdentifier: 
+  Path: event:/Interaction/Fireplace/sfx_knife
+  Guid:
+    Data1: -1673009441
+    Data2: 1177591300
+    Data3: 1230592155
+    Data4: -1716751230
+  Banks:
+  - {fileID: 4232040016842089913}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &655411535822641779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1016,6 +1139,33 @@ MonoBehaviour:
     Data4: -1478928038
   Banks:
   - {fileID: 7276720832519502712}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &686661646517926895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Interaction/Fireplace/sfx_fireplace_off
+  m_EditorClassIdentifier: 
+  Path: event:/Interaction/Fireplace/sfx_fireplace_off
+  Guid:
+    Data1: 1102481554
+    Data2: 1239566591
+    Data3: 57431950
+    Data4: -322921586
+  Banks:
+  - {fileID: 4232040016842089913}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1250,10 +1400,10 @@ MonoBehaviour:
   Path: Assets/FMOD/projekt1/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639035769349334093
+  lastModified: 639045338393376714
   FileSizes:
   - Name: Desktop
-    Value: 6940832
+    Value: 7264096
   Exists: 1
 --- !u!114 &4284474310712303889
 MonoBehaviour:

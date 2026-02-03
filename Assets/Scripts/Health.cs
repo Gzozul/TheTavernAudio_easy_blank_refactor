@@ -1,49 +1,88 @@
-using UnityEngine;
+using FMOD.Studio;
 using FMODUnity;
+using UnityEngine;
 
-/// <summary>
-/// Zarządza aktywacją snapshotu zdrowia, gdy gra gracz naciśnie klawisz "K".
-/// </summary>
 public class Health : MonoBehaviour
 {
-    // Flaga stanu snapshotu.
-    [SerializeField]
     private bool healthSnapshotActive = false;
 
-    // FMOD - Instancja snapshotu.
-    private FMOD.Studio.EventInstance healthSnapshotInstance;
+    private EventInstance heartbeatInstance;
+    public EventReference heartbeatEvent;
+
+    private EventInstance healthSnapshotInstance;
     public EventReference healthSnapshot;
 
-    void Update()
+    void Start()
     {
-        // Sprawdza, czy klawisz "K" został naciśnięty.
-        if (Input.GetKeyDown(KeyCode.K))
+        // Создаём heartbeat один раз и запускаем, он всегда играет
+        if (!heartbeatEvent.IsNull)
         {
-            // Przełącza stan snapshotu.
-            ToggleSnapshot(!healthSnapshotActive);
-        }
-    }
-
-    /// <summary>
-    /// Włącza lub wyłącza instancję snapshotu zdrowia.
-    /// </summary>
-    /// <param name="activate">True, aby włączyć, false, aby wyłączyć.</param>
-    private void ToggleSnapshot(bool activate)
-    {
-        if (activate)
-        {
-            healthSnapshotInstance = RuntimeManager.CreateInstance(healthSnapshot);
-            healthSnapshotInstance.start();
+            heartbeatInstance = RuntimeManager.CreateInstance(heartbeatEvent);
+            heartbeatInstance.start();
+            heartbeatInstance.setParameterByNameWithLabel("low_health", "Normal");
         }
         else
         {
-            if (healthSnapshotInstance.isValid())
+            Debug.LogError("Heartbeat Event не назначен!");
+        }
+
+        // Создаём snapshot один раз, но не запускаем
+        if (!healthSnapshot.IsNull)
+        {
+            healthSnapshotInstance = RuntimeManager.CreateInstance(healthSnapshot);
+        }
+        else
+        {
+            Debug.LogError("Health Snapshot Event не назначен!");
+        }
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            healthSnapshotActive = !healthSnapshotActive;
+            ToggleHealthState(healthSnapshotActive);
+        }
+    }
+
+    private void ToggleHealthState(bool activate)
+    {
+        // Snapshot включаем/выключаем, но heartbeat **не трогаем**
+        if (healthSnapshotInstance.isValid())
+        {
+            if (activate)
+            {
+                healthSnapshotInstance.start();
+                heartbeatInstance.start();
+            }
+            else
             {
                 healthSnapshotInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-                healthSnapshotInstance.release();
+                heartbeatInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             }
         }
-        // Aktualizuje stan.
-        healthSnapshotActive = activate;
+
+        // Меняем параметр heartbeat, чтобы он реагировал на состояние
+        if (heartbeatInstance.isValid())
+        {
+            heartbeatInstance.setParameterByNameWithLabel("low_health", activate ? "Low" : "Normal");
+
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if (heartbeatInstance.isValid())
+        {
+            heartbeatInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            heartbeatInstance.release();
+        }
+
+        if (healthSnapshotInstance.isValid())
+        {
+            healthSnapshotInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            healthSnapshotInstance.release();
+        }
     }
 }

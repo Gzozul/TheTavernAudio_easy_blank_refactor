@@ -16,7 +16,7 @@ public class VCAControl : MonoBehaviour
     void Start()
     {
         slider = GetComponent<Slider>();
-        //vca = FMODUnity.RuntimeManager.GetVCA(path:"vca:/Music");
+        vca = FMODUnity.RuntimeManager.GetVCA(path:"vca:/Music");
         vca = FMODUnity.RuntimeManager.GetVCA(vcaPath);
 
         float saveVolume = PlayerPrefs.GetFloat(saveKey, defaultValue: 1);

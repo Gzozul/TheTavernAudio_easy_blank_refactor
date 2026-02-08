@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.03.00">
 	<object class="MixerGroup" id="{744b5f0b-5209-423d-8e72-eee29adcae02}">
+		<property name="volume">
+			<value>-80</value>
+		</property>
 		<property name="name">
 			<value>Heartbeat</value>
 		</property>
-		<relationship name="masters">
-			<destination>{0243776c-7ead-45fe-8a4c-5e0ccb91cd5c}</destination>
-		</relationship>
 		<relationship name="effectChain">
 			<destination>{9ed959c2-fd3b-4d7a-b013-e5efa0fffcd7}</destination>
 		</relationship>

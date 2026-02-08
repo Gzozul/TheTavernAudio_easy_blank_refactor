@@ -119,6 +119,69 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &15402056
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 15402058}
+  - component: {fileID: 15402057}
+  m_Layer: 0
+  m_Name: Heartbeat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &15402057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 15402056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1925047089
+      Data2: 1198081529
+      Data3: 55618438
+      Data4: -3966222
+    Path: event:/Player/sfx_heartbeat
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!4 &15402058
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 15402056}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 13.2908325, y: 8.724524, z: -6.5047226}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &26559585
 GameObject:
   m_ObjectHideFlags: 0
@@ -2335,12 +2398,12 @@ GameObject:
   - component: {fileID: 613997985}
   - component: {fileID: 613997993}
   - component: {fileID: 613997990}
-  - component: {fileID: 613997998}
   - component: {fileID: 613997989}
   - component: {fileID: 613997994}
   - component: {fileID: 613997995}
   - component: {fileID: 613997997}
   - component: {fileID: 613997996}
+  - component: {fileID: 613997998}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -2608,17 +2671,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 613997984}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9aa7b242fd310f747935e50999d1290e, type: 3}
+  m_Script: {fileID: 11500000, guid: ea63d193a6778b1419fd34215a97b1f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   healthSnapshotActive: 0
-  heartbeatEvent:
-    Guid:
-      Data1: 266527623
-      Data2: 1116227140
-      Data3: -2042069587
-      Data4: -1689727646
-    Path: event:/sfx_heartbeat
   healthSnapshot:
     Guid:
       Data1: 81089485
@@ -7698,3 +7754,4 @@ SceneRoots:
   - {fileID: 1622213559}
   - {fileID: 1293263389}
   - {fileID: 1993654885}
+  - {fileID: 15402058}

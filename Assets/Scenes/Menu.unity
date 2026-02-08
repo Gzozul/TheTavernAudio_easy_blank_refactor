@@ -1037,7 +1037,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 752c0c92250976745afad1b3a08caacf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vcaVolume: 0
+  vcaPath: 
+  saveKey: 
+  vcaVolume: 10
 --- !u!1 &1352765539
 GameObject:
   m_ObjectHideFlags: 0

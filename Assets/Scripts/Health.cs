@@ -1,88 +1,49 @@
-using FMOD.Studio;
-using FMODUnity;
 using UnityEngine;
+using FMODUnity;
 
+/// <summary>
+/// Zarządza aktywacją snapshotu zdrowia, gdy gra gracz naciśnie klawisz "K".
+/// </summary>
 public class Health : MonoBehaviour
 {
+    // Flaga stanu snapshotu.
+    [SerializeField]
     private bool healthSnapshotActive = false;
 
-    private EventInstance heartbeatInstance;
-    public EventReference heartbeatEvent;
-
-    private EventInstance healthSnapshotInstance;
+    // FMOD - Instancja snapshotu.
+    private FMOD.Studio.EventInstance healthSnapshotInstance;
     public EventReference healthSnapshot;
-
-    void Start()
-    {
-        // Создаём heartbeat один раз и запускаем, он всегда играет
-        if (!heartbeatEvent.IsNull)
-        {
-            heartbeatInstance = RuntimeManager.CreateInstance(heartbeatEvent);
-            heartbeatInstance.start();
-            heartbeatInstance.setParameterByNameWithLabel("low_health", "Normal");
-        }
-        else
-        {
-            Debug.LogError("Heartbeat Event не назначен!");
-        }
-
-        // Создаём snapshot один раз, но не запускаем
-        if (!healthSnapshot.IsNull)
-        {
-            healthSnapshotInstance = RuntimeManager.CreateInstance(healthSnapshot);
-        }
-        else
-        {
-            Debug.LogError("Health Snapshot Event не назначен!");
-        }
-    }
 
     void Update()
     {
+        // Sprawdza, czy klawisz "K" został naciśnięty.
         if (Input.GetKeyDown(KeyCode.K))
         {
-            healthSnapshotActive = !healthSnapshotActive;
-            ToggleHealthState(healthSnapshotActive);
+            // Przełącza stan snapshotu.
+            ToggleSnapshot(!healthSnapshotActive);
         }
     }
 
-    private void ToggleHealthState(bool activate)
+    /// <summary>
+    /// Włącza lub wyłącza instancję snapshotu zdrowia.
+    /// </summary>
+    /// <param name="activate">True, aby włączyć, false, aby wyłączyć.</param>
+    private void ToggleSnapshot(bool activate)
     {
-        // Snapshot включаем/выключаем, но heartbeat **не трогаем**
-        if (healthSnapshotInstance.isValid())
+        if (activate)
         {
-            if (activate)
-            {
-                healthSnapshotInstance.start();
-                heartbeatInstance.start();
-            }
-            else
+            healthSnapshotInstance = RuntimeManager.CreateInstance(healthSnapshot);
+            healthSnapshotInstance.start();
+        }
+        else
+        {
+            if (healthSnapshotInstance.isValid())
             {
                 healthSnapshotInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-                heartbeatInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                healthSnapshotInstance.release();
             }
         }
-
-        // Меняем параметр heartbeat, чтобы он реагировал на состояние
-        if (heartbeatInstance.isValid())
-        {
-            heartbeatInstance.setParameterByNameWithLabel("low_health", activate ? "Low" : "Normal");
-
-        }
-    }
-
-    private void OnDestroy()
-    {
-        if (heartbeatInstance.isValid())
-        {
-            heartbeatInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-            heartbeatInstance.release();
-        }
-
-        if (healthSnapshotInstance.isValid())
-        {
-            healthSnapshotInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-            healthSnapshotInstance.release();
-        }
+        // Aktualizuje stan.
+        healthSnapshotActive = activate;
     }
 }

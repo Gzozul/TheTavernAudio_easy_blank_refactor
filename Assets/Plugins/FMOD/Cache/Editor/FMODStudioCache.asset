@@ -863,34 +863,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 330
---- !u!114 &-1532157398367719384
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/sfx_heartbeat
-  m_EditorClassIdentifier: 
-  Path: event:/sfx_heartbeat
-  Guid:
-    Data1: 266527623
-    Data2: 1116227140
-    Data3: -2042069587
-    Data4: -1689727646
-  Banks:
-  - {fileID: 4232040016842089913}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 8535698350427574806}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 6730
 --- !u!114 &-1373180608540374300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1040,10 +1012,10 @@ MonoBehaviour:
   Path: Assets/FMOD/projekt1/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639057452599041213
+  lastModified: 639061088386112418
   FileSizes:
   - Name: Desktop
-    Value: 2458
+    Value: 2418
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -1077,8 +1049,8 @@ MonoBehaviour:
   - {fileID: -1825244296449448465}
   - {fileID: -579310382514118793}
   - {fileID: 592878595647774366}
-  - {fileID: -1532157398367719384}
   - {fileID: -8902499090681929395}
+  - {fileID: 5505550175115365850}
   EditorParameters:
   - {fileID: 4145422942525041534}
   MasterBanks:
@@ -1086,7 +1058,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: -31978083695117126}
   cacheVersion: 131856
-  cacheTime: 639057452599041213
+  cacheTime: 639061088386112418
   SerializableEventsDict:
   - key: event:/Player/Jumps/sfx_player_jump
     index: 0
@@ -1120,9 +1092,9 @@ MonoBehaviour:
     index: 14
   - key: event:/Interaction/Fireplace/sfx_knife
     index: 15
-  - key: event:/sfx_heartbeat
-    index: 16
   - key: snapshot:/health
+    index: 16
+  - key: event:/Player/sfx_heartbeat
     index: 17
 --- !u!114 &464241992053733205
 MonoBehaviour:
@@ -1461,10 +1433,10 @@ MonoBehaviour:
   Path: Assets/FMOD/projekt1/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639057452599021140
+  lastModified: 639061088386092466
   FileSizes:
   - Name: Desktop
-    Value: 7316800
+    Value: 7316480
   Exists: 1
 --- !u!114 &4284474310712303889
 MonoBehaviour:
@@ -1540,6 +1512,33 @@ MonoBehaviour:
   - Open
   - Close
   Exists: 1
+--- !u!114 &5505550175115365850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/sfx_heartbeat
+  m_EditorClassIdentifier: 
+  Path: event:/Player/sfx_heartbeat
+  Guid:
+    Data1: 1925047089
+    Data2: 1198081529
+    Data3: 55618438
+    Data4: -3966222
+  Banks:
+  - {fileID: 4232040016842089913}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 6730
 --- !u!114 &6029252828536356757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1875,32 +1874,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 520
---- !u!114 &8535698350427574806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/sfx_heartbeat/low_health
-  m_EditorClassIdentifier: 
-  Name: low_health
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 3600446792
-    data2: 3357522231
-  Type: 2
-  IsGlobal: 0
-  Labels:
-  - Low
-  - Normal
-  Exists: 1
 --- !u!114 &8806737417653303990
 MonoBehaviour:
   m_ObjectHideFlags: 0
